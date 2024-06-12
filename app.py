@@ -35,7 +35,7 @@ if uploaded_tweet_file:
         dt_tweet = pd.DataFrame({"komentar": data.split("\n")})
 
     st.write("Uploaded Tweet Data:")
-    st.dataframe(dt_tweet, height=270)
+    st.dataframe(dt_tweet, height=350)
 
     # Case folding
     dt_tweet['case_folding'] = dt_tweet['komentar'].str.lower()
