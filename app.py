@@ -18,10 +18,10 @@ import io
 st.set_page_config(page_title="Pelabelan Data app", page_icon="Icon/management.png")
 
 # Streamlit UI
-st.title("Tweet Sentiment Analysis")
+st.title("Pelabelan Data")
 
 # Upload file CSV, XLSX, atau TXT
-uploaded_tweet_file = st.file_uploader("Upload file containing tweets", type=["xlsx"])
+uploaded_tweet_file = st.file_uploader("Upload File Komentar", type=["xlsx"])
 
 if uploaded_tweet_file:
     if uploaded_tweet_file.type == "csv":
