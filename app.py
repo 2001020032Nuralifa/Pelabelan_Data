@@ -94,7 +94,7 @@ if uploaded_tweet_file:
     st.dataframe(dt_tweet, height=420)
 
     # Upload lexicon files
-    uploaded_positive_lexicon = st.file_uploader("Upload CSV file containing positive lexicon", type=["csv"])
+    uploaded_positive_lexicon = st.file_uploader("Upload CSV file containing positive lexicon", type=["csv", "csv"])
     uploaded_negative_lexicon = st.file_uploader("Upload CSV file containing negative lexicon", type=["csv"])
 
     if uploaded_positive_lexicon and uploaded_negative_lexicon:
