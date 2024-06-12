@@ -21,7 +21,7 @@ st.set_page_config(page_title="Pelabelan Data app", page_icon="Icon/management.p
 st.title("Tweet Sentiment Analysis")
 
 # Upload file CSV, XLSX, atau TXT
-uploaded_tweet_file = st.file_uploader("Upload file containing tweets", type=["csv", "xlsx", "txt"])
+uploaded_tweet_file = st.file_uploader("Upload file containing tweets", type=["xlsx"])
 
 if uploaded_tweet_file:
     if uploaded_tweet_file.type == "csv":
