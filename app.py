@@ -145,9 +145,9 @@ if uploaded_tweet_file:
 
         # Create a download button
         st.download_button(
-            label="Download Processed Data as CSV",
+            label="Download Pelabelan Data as CSV",
             data=csv_bytes,
-            file_name="processed_tweet_data.csv",
+            file_name="Pelabelan_data.csv",
             mime="text/csv"
         )
 
