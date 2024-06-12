@@ -15,7 +15,7 @@ import io
 
 
 # streamlit app
-st.set_page_config(page_title="Klasifikasi Data app", page_icon="Icon/management.png")
+st.set_page_config(page_title="Pelabelan Data app", page_icon="Icon/management.png")
 
 # Streamlit UI
 st.title("Tweet Sentiment Analysis")
