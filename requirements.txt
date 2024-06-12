@@ -4,3 +4,4 @@ streamlit
 nltk
 matplotlib
 seaborn
+openpyxl
