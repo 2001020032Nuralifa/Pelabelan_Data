@@ -21,10 +21,10 @@ st.set_page_config(page_title="Pelabelan Data app", page_icon="Icon/classificati
 st.title("Pelabelan Data")
 
 # Upload file CSV, XLSX, atau TXT
-uploaded_tweet_file = st.file_uploader("Upload File Komentar", type=["xlsx"])
+uploaded_tweet_file = st.file_uploader("Upload File Komentar", type=["csv", "xlsx", "txt"])
 
 if uploaded_tweet_file:
-    if uploaded_tweet_file.type == "csv":
+    if uploaded_tweet_file.type == "text/csv":
         dt_tweet = pd.read_csv(uploaded_tweet_file, encoding='utf-8')
     elif uploaded_tweet_file.type == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
         dt_tweet = pd.read_excel(uploaded_tweet_file)
