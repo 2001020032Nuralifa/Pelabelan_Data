@@ -169,7 +169,7 @@ if uploaded_tweet_file:
         positive_tweets = dt_tweet[dt_tweet['polarity'] == 'positive']
         positive_tweets = positive_tweets[['tweet_tokens_WSW', 'polarity_score', 'polarity']].sort_values(by='polarity_score', ascending=False).reset_index(drop=True)
         positive_tweets.index += 1
-        st.write(positive_tweets, height=420)
+        st.write(positive_tweets)
 
         # Display negative tweets
         st.write("Negative Tweets:")
