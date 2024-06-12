@@ -7,6 +7,7 @@ from nltk.corpus import stopwords
 import nltk
 import matplotlib.pyplot as plt
 import seaborn as sns
+import io
 
 # Download NLTK data
 # nltk.download('punkt')
@@ -136,9 +137,19 @@ if uploaded_tweet_file:
         st.write("Processed Tweet Data with Sentiment Analysis:")
         st.dataframe(dt_tweet, height=300)
 
-        if st.button("Export to CSV"):
-            dt_tweet.to_csv("processed_tweet_data.csv", index=False)
-            st.success("Data exported successfully!")
+        # Convert DataFrame to CSV
+        csv = dt_tweet.to_csv(index=False)
+
+        # Convert CSV string to bytes
+        csv_bytes = io.BytesIO(csv.encode('utf-8'))
+
+        # Create a download button
+        st.download_button(
+            label="Download Processed Data as CSV",
+            data=csv_bytes,
+            file_name="processed_tweet_data.csv",
+            mime="text/csv"
+        )
 
         # Display polarity count
         st.write("Sentiment Polarity Distribution:")
