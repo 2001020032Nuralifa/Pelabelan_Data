@@ -10,7 +10,7 @@ import seaborn as sns
 import io
 
 # Download NLTK data
-# nltk.download('punkt')
+nltk.download('punkt')
 # nltk.download('stopwords')
 
 
