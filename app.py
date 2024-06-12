@@ -11,7 +11,7 @@ import io
 
 # Download NLTK data
 nltk.download('punkt')
-# nltk.download('stopwords')
+nltk.download('stopwords')
 
 
 # streamlit app
