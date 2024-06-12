@@ -35,7 +35,7 @@ if uploaded_tweet_file:
         dt_tweet = pd.DataFrame({"komentar": data.split("\n")})
 
     st.write("Uploaded Tweet Data:")
-    st.dataframe(dt_tweet, height=350)
+    st.dataframe(dt_tweet, height=400)
 
     # Case folding
     dt_tweet['case_folding'] = dt_tweet['komentar'].str.lower()
@@ -91,7 +91,7 @@ if uploaded_tweet_file:
 
     # Display preprocessed data
     st.write("Preprocessed Tweet Data:")
-    st.dataframe(dt_tweet, height=300)
+    st.dataframe(dt_tweet, height=400)
 
     # Upload lexicon files
     uploaded_positive_lexicon = st.file_uploader("Upload CSV file containing positive lexicon", type=["csv"])
@@ -135,7 +135,7 @@ if uploaded_tweet_file:
         dt_tweet['polarity'] = results[1]
 
         st.write("Processed Tweet Data with Sentiment Analysis:")
-        st.dataframe(dt_tweet, height=300)
+        st.dataframe(dt_tweet, height=400)
 
         # Convert DataFrame to CSV
         csv = dt_tweet.to_csv(index=False)
